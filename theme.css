@@ -687,9 +687,9 @@ body {
 }
 
 .header .content a {
-    color: #fff;
+    color: #00bbce;
     border: 1px solid #fff;
-    background-color: #00bbce;
+    background-color: #ffffff;
     padding: 10px 20px;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -698,7 +698,28 @@ body {
 }
 
 .header .content a:hover {
-    border: 1px solid #777;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.35);
+}
+
+.header_overlay {
+    position: relative;
+}
+
+.header_overlay:before {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 1000px;
+    width: 50%;
+    left: -50px;
+    transform: skew(20deg);
+    background-color: rgba(1, 187, 206, 0.84);
+}
+
+@media (max-width:992px) {
+    .header_overlay:before {
+        display: none;
+    }
 }
 
 
@@ -1578,7 +1599,7 @@ body {
 }
 
 
-/*****************************************About Column*****/
+/*********About Column*****/
 
 .footer {
     position: relative
@@ -1600,7 +1621,7 @@ body {
 }
 
 
-/*****************************************Info Column*****/
+/********************Info Column*****/
 
 .footer i {
     height: 40px;
@@ -1633,7 +1654,7 @@ body {
 }
 
 
-/*****************************************Links Column*****/
+/************************Links Column*****/
 
 .footer ul li a {
     color: #fff;
@@ -1649,7 +1670,7 @@ body {
 }
 
 
-/*****************************************Contact Column*****/
+/***************************Contact Column*****/
 
 .footer .form-style input {
     width: 100%;
@@ -1736,31 +1757,35 @@ body {
 
 /***************Copy-Right Row*****************/
 
-.footer .copy-right {
-    margin-top: 90px;
-    text-align: center;
+.footer .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
 }
 
-@media (max-width:768px) {}
-
-.footer .copy-right p {
+.footer .copyright p {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
-    margin-bottom: 0;
-    margin-bottom: 30px;
     text-align: left;
+    margin-bottom: 20px
 }
 
-.footer .copy-right .maha {
-    margin-bottom: 30px;
-    text-align: right;
+.footer .copyright p a {
+    color: #000;
+    font-weight: 600;
+    color: rgba(127, 32, 66, 0.95)
 }
 
-@media (max-width:768px) {
-    .footer .copy-right p,
-    .footer .copy-right .maha {
+@media (max-width:678px) {
+    .footer .copyright p {
+        margin: 10px 0;
+    }
+    .footer .copyright {
         text-align: center;
+        justify-content: center;
     }
 }
 
@@ -4027,7 +4052,7 @@ body {
     width: 100%;
     margin-bottom: 30px;
     border: 1px solid #cacaca;
-    opacity: 0.8
+    opacity: 1
 }
 
 .form-style textarea {

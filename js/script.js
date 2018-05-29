@@ -49,7 +49,7 @@ jQuery(document).ready(function ($) {
         $(".servese .servese-tabs .tab > div").hide();
 
         //Show Dive With This Link
-        $('.' + $(this).data('class')).show(1000);
+        $('.' + $(this).data('class')).fadeIn(1000);
     });
     /////Single Slider In Mobile
     $(".single-slider").slick({
